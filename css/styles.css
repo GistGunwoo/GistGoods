@@ -32,6 +32,7 @@
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #343a40;
+  --lightgray: #a1a1a6;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -58,15 +59,22 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
+@font-face {
+  font-family: 'ChosunBg';
+  src: local(ChosunBg),url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunBg.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ChosunBg,"Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 100;
   line-height: 1.5;
-  color: #212529;
+  color: var(--lightgray);
   text-align: left;
-  background-color: #fff;
+  background-color: black;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -84,9 +92,18 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
 }
 
-p {
+.p, p {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-family: ChosunBg;
+}
+
+p2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-style: bold;
+  font-weight: 900;
+  font-family: "Noto Sans","Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 abbr[title],
@@ -159,7 +176,7 @@ sup {
 }
 
 a {
-  color: #f4623a;
+  color: white;
   text-decoration: none;
   background-color: transparent;
 }
@@ -358,20 +375,20 @@ template {
   display: none !important;
 }
 
-h1, h2, h3, h4, h5, h6,
+ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ChosunBg,"Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 500;
   line-height: 1.2;
 }
 
 h1, .h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 h2, .h2 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 h3, .h3 {
@@ -388,6 +405,10 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: 1rem;
+}
+
+.p, p, p2 {
+ font-size : 1.5rem;
 }
 
 .lead {
@@ -481,8 +502,14 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #fff;
   border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-item {
+  margin-bottom: 2rem;
   border-radius: 0.25rem;
   max-width: 100%;
   height: auto;
@@ -2437,33 +2464,32 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #f4623a;
-  border-color: #f4623a;
+  color: black;
+  background-color: #fff;
+  border-color: #fff;
 }
 .btn-primary:hover {
-  color: #fff;
-  background-color: #f24516;
-  border-color: #ee3e0d;
+  color: black;
+  background-color: #fff;
+  border-color: #fff;
 }
 .btn-primary:focus, .btn-primary.focus {
-  color: #fff;
-  background-color: #f24516;
-  border-color: #ee3e0d;
-  box-shadow: 0 0 0 0.2rem rgba(246, 122, 88, 0.5);
+  color: black;
+  background-color: #fff;
+  border-color: #fff;
 }
 .btn-primary.disabled, .btn-primary:disabled {
-  color: #fff;
-  background-color: #f4623a;
-  border-color: #f4623a;
+  color: black;
+  background-color: #fff;
+  border-color: #fff;
 }
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
-  color: #fff;
-  background-color: #ee3e0d;
-  border-color: #e23a0d;
+  color: black;
+  background-color: #fff;
+  border-color: #fff;
 }
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(246, 122, 88, 0.5);
+  
 }
 
 .btn-secondary {
@@ -9774,6 +9800,10 @@ button.bg-dark:focus {
   color: #fff !important;
 }
 
+.text-lightgray {
+  color: var(--lightgray);
+}
+
 .text-primary {
   color: #f4623a !important;
 }
@@ -10007,7 +10037,7 @@ hr.light {
 }
 
 .page-section {
-  padding: 8rem 0;
+  padding: 5rem 0;
 }
 
 #mainNav {
@@ -10075,7 +10105,7 @@ hr.light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 255) 0%, rgba(0, 0, 0, 255) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),url("../assets/pics/_both1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10142,4 +10172,8 @@ header.masthead h1 {
 
 .text-white-75 {
   color: rgba(255, 255, 255, 0.75);
+}
+
+centered {
+  align-items: center;
 }
